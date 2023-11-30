@@ -1,0 +1,19 @@
+#This is the playbook for installing openstack prerequisites
+
+---
+
+
+- hosts: keystone
+  become: true
+  roles:
+    - role: keystone
+
+- hosts: glance
+  become: true
+  roles:
+    - role: glance
+
+- hosts: nova
+  become: true
+  roles:
+    - role: nova	
